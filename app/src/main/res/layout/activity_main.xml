@@ -8,14 +8,14 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="93dp"
-        android:layout_height="47dp"
+        android:layout_width="91dp"
+        android:layout_height="48dp"
         android:layout_marginStart="28dp"
         android:layout_marginLeft="28dp"
         android:text="読み込み"
         app:layout_constraintBottom_toBottomOf="@+id/button2"
         app:layout_constraintEnd_toStartOf="@+id/button2"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.19"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
