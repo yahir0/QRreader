@@ -32,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
         Button button3 = findViewById(R.id.button3);
         final TextView textView = findViewById(R.id.textView2);
 
+
+
         new IntentIntegrator(MainActivity.this).setBeepEnabled(false).setCaptureActivity(MyCaptureActivity.class).setPrompt("QRコードにかざしてね☆").initiateScan();
 
         button.setOnClickListener(new View.OnClickListener() {
@@ -41,6 +43,8 @@ public class MainActivity extends AppCompatActivity {
                 //QRコードにかざしてね☆ = Please bring your QR code
             }
         });
+
+
 
 
         button2.setOnClickListener(new View.OnClickListener() {
@@ -98,4 +102,6 @@ public class MainActivity extends AppCompatActivity {
         //URL Judgment
         textView.setText(result.getContents());
     }
+
+
 }
