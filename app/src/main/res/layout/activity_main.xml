@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="QRコードを読み込んでください"
+        android:text="@string/message"
         android:paddingTop="200dp" />
 
 
@@ -33,14 +33,16 @@
             android:layout_width="0dp"
             android:layout_height="48dp"
             android:layout_weight="1"
-            android:text="読み込み" />
+            android:text="@string/load"
+            android:layout_marginRight="10dp"/>
 
         <Button
             android:id="@+id/button2"
             android:layout_width="0dp"
             android:layout_height="48dp"
             android:layout_weight="1"
-            android:text="コピー" />
+            android:text="@string/copy"
+            android:layout_marginRight="10dp"/>
 
 
         <Button
@@ -48,7 +50,8 @@
             android:layout_width="0dp"
             android:layout_height="48dp"
             android:layout_weight="1"
-            android:text="クリア" />
+            android:text="@string/clear"
+            />
 
 
     </LinearLayout>
@@ -59,7 +62,7 @@
         android:layout_height="match_parent"
         android:layout_weight="2"
         android:gravity="center"
-        android:text="CopyRight Yahiro" />
+        android:text="Powered by Yahiro" />
 
 
 </LinearLayout>

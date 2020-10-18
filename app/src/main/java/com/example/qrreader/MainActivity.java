@@ -34,13 +34,12 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        new IntentIntegrator(MainActivity.this).setBeepEnabled(false).setCaptureActivity(MyCaptureActivity.class).setPrompt("QRコードにかざしてね☆").initiateScan();
+        new IntentIntegrator(MainActivity.this).setBeepEnabled(false).setCaptureActivity(MyCaptureActivity.class).setPrompt(getString(R.string.CameraMessage)).initiateScan();
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                new IntentIntegrator(MainActivity.this).setBeepEnabled(false).setCaptureActivity(MyCaptureActivity.class).setPrompt("QRコードにかざしてね☆").initiateScan();
-                //QRコードにかざしてね☆ = Please bring your QR code
+                new IntentIntegrator(MainActivity.this).setBeepEnabled(false).setCaptureActivity(MyCaptureActivity.class).setPrompt(getString(R.string.CameraMessage)).initiateScan();
             }
         });
 
@@ -55,16 +54,14 @@ public class MainActivity extends AppCompatActivity {
                     return;
                 }
                 clipboardManager.setPrimaryClip(ClipData.newPlainText("", textView.getText()));
-                Toast.makeText(MainActivity.this, "クリップボードにコピーされました", Toast.LENGTH_SHORT).show();
-                //クリップボードにコピーされました = Complete Copy Clipboard
+                Toast.makeText(MainActivity.this, R.string.Clipboard, Toast.LENGTH_SHORT).show();
             }
         });
 
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                textView.setText("QRコードを読み込んでください");
-                //QRコードを読み込んでください = Please bring your QR code
+                textView.setText(R.string.message);
             }
         });
 
@@ -79,10 +76,8 @@ public class MainActivity extends AppCompatActivity {
         if (isValidUrl(result.getContents())) {
 
             AlertDialog.Builder alert = new AlertDialog.Builder(this);
-            alert.setMessage("ブラウザを開きますか？");
-            //ブラウザを起動しますか？ = Do you want to start the browser?
-            alert.setPositiveButton("開く", new DialogInterface.OnClickListener() {
-            //開く = Open
+            alert.setMessage(R.string.browsermessage);
+            alert.setPositiveButton(R.string.open, new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     Uri uri = Uri.parse(result.getContents());
@@ -90,17 +85,22 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(i);
                 }
             });
-            alert.setNegativeButton("キャンセル", new DialogInterface.OnClickListener() {
-            //キャンセル = Cancel
+            alert.setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
 
                 }
             });
             alert.show();
+
         }
         //URL Judgment
-        textView.setText(result.getContents());
+
+        if(result.getContents() ==null){
+            textView.setText(R.string.message);
+        }else {
+            textView.setText(result.getContents());
+        }
     }
 
 

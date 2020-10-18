@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">QRコードリーダー</string>
+    <string name="load">読み込み</string>
+    <string name="copy">コピー</string>
+    <string name="clear">クリア</string>
+    <string name="message">QRコードを読み込んでください</string>
+    <string name="open">開く</string>
+    <string name="cancel">キャンセル</string>
+    <string name="browsermessage">ブラウザを開きますか？</string>
+    <string name="Clipboard">クリップボードにコピーしました</string>
+    <string name="CameraMessage">QRコードにかざしてね☆</string>
+</resources>
