@@ -3,7 +3,7 @@
     <string name="load">Load</string>
     <string name="copy">Copy</string>
     <string name="clear">Clear</string>
-    <string name="message">Please take a QR code</string>
+    <string name="message">Please take a QR code.</string>
     <string name="open">Open</string>
     <string name="cancel">Cancel</string>
     <string name="browsermessage">Do you want to start the browser?</string>
