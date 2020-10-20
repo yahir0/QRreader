@@ -1,12 +1,14 @@
 <resources>
-    <string name="app_name">QRreader</string>
+    <string name="app_name">QRCodeReader</string>
     <string name="load">Load</string>
     <string name="copy">Copy</string>
     <string name="clear">Clear</string>
+    <string name="save">Save</string>
     <string name="message">Please take a QR code.</string>
     <string name="open">Open</string>
     <string name="cancel">Cancel</string>
     <string name="browsermessage">Do you want to start the browser?</string>
     <string name="Clipboard">Copied it to the Clipboard</string>
     <string name="CameraMessage">Hold it over the QR code.</string>
+    <string name="menu_item1">SaveList</string>
 </resources>
